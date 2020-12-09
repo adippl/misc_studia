@@ -1,0 +1,35 @@
+Simple terminal tictactoe game.
+
+main.cs		exapmle use
+tictactoe.cs	game with it's namespace
+
+
+Came consist of 3 classes in "tictactoe" namespace.
+To start game in your program simply create object. 
+	tictactoe.tic tic=new tictactoe.tic();
+and call startGame() method. 
+	tit.startGame();
+If you want to play again just call it again, it resets the game.
+
+Game supports 3 game mode, 
+0 (or empty arg) player vs AI
+1 AI vs AI
+2 Player vs Player
+(3 ML ai mode comming soon ;)
+
+
+Compile flags:
+DEBUG	Enables AI debug mode and plays one AI vs Ai game in the beginning.
+
+colour	changes fg colour to magenta. (requested feature)
+
+audio	Enables Audio class, plays doom soundtrack in the background
+		and random Unreal Tornament announcer tracks on victory, defeat
+		and end of the game.
+
+		Audio files not provided with repo.
+
+		Due to mono's audio issues, Audio class uses unix mpv media player
+		for playback. Untested on windows.
+		Paths to player can be OS/distro
+		specific. 

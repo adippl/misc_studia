@@ -1,0 +1,6 @@
+out:
+	mcs *.cs -out:a.out.exe
+cl:
+	rm a.out.exe 
+zip:
+	zip archive.zip *.cs save.xml mkfile readme

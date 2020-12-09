@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Person>
+    <sex>m</sex>
+    <wiek>66</wiek>
+    <imie>Janusz</imie>
+    <nazwisko>Kowalski</nazwisko>
+    <kodPocztowy>66-666</kodPocztowy>
+    <miasto>Koszalin</miasto>
+    <ulica>Kolska</ulica>
+    <nrDomu>77</nrDomu>
+    <nrMieszkania>88</nrMieszkania>
+  </Person>
+</ArrayOfPerson>

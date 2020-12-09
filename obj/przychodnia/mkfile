@@ -1,0 +1,31 @@
+CC=gcc-9.1.0
+CCXX=g++-9.1.0
+CCARG= -std=c18 -g -Wall -pedantic -c 
+CCXXARG= -std=c++2a -g -Wall -pedantic -c 
+LDARG= -lm -lecl
+
+SRC=`{ls -1 *.cpp|sed 's/....$//'; ls -1 *.c|sed 's/..$//'; }
+OBJ=`{ls -1 *.cpp|sed 's/....$/.o/'; ls -1 *.c|sed 's/..$/.o/'; }
+EXEC=a.out
+
+run: output
+	echo $SRC
+	./$EXEC
+
+output: $OBJ
+	$CCXX $LDARG $OBJ -o $EXEC
+
+%.o:	%.cpp
+	$CCXX $CCXXARG -c $prereq -o $target
+%.o:	%.c
+	$CC $CCARG -c $prereq -o $target
+
+cl:
+	rm *.o
+nk: cl
+	rm $EXEC
+
+test:
+	echo $SRC $OBJ $EXEC
+
+

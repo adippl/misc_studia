@@ -1,0 +1,9 @@
+CC=mcs
+
+CFLAGS=
+
+output: 
+	$CC $CFLAGS main.cs tictactoe.cs
+
+cl:
+	rm *.exe

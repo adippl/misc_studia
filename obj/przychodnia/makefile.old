@@ -1,0 +1,19 @@
+CC=g++-9.1.0
+CCARGS= -std=c++2a -g -Wall -pedantic  
+LDARGS= -lm -lecl
+
+
+SOURCES=$(wildcard *.cpp )
+OBJECTS=$(SOURCES:.cpp=.o)
+EXEC=a.out
+
+all: $(EXEC)
+	./$(EXEC)
+
+$(EXEC): $(OBJECTS)
+	$(CC) $(LDARGS) $(OBJECTS) -o $(EXEC)
+
+%.o: %.cpp
+	$(CC) $(CCARGS) -c $< -o $@
+cl:
+	rm $(EXEC) $(OBJECTS) *.hpp.gch
